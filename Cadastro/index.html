@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/stylecad.css">
+</head>
+
+<body>
+    <video autoplay muted loop>
+        <source src="video/coment_vid.mp4" type="video/mp4">
+    </video>
+    <header>
+        <h1 class="logo">OVER:Wiki</h1>
+        <nav class="navigation">
+            <a href="https://wa.me/5592993091862?text=meu%20whatsapp!!!">Contato</a>
+            <a href="coment.html">Comente</a>
+        </nav>
+    </header>
+
+    <div class="btn_log">
+        <h1>Aperte no botão abaixo</h1>
+        <button class="btnlogin">login</button>
+    </div>
+
+    <div class="container">
+        <div class="windows">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="caixa-input">
+                    <label>Email</label>
+                    <input id="email" type="email" required>
+                </div>
+                <div class="caixa-input">
+                    <label>Senha</label>
+                    <input id="senha" type="password" required>
+                </div>
+                <button type="button" id="ID_DO_BOTAO" class="btn">Entrar</button>
+                <div class="login-register">
+                    <p>Não tem conta? <a href="/Cadastro/cadastro.html" class="registrar">Registrar</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h1>
+            &copy;2024, Criado por FLP_Silva.</h1>
+    </div>
+
+    <script>
+
+
+        const container = document.querySelector('.container')
+        const btnpopup = document.querySelector('.btnlogin');
+
+        btnpopup.addEventListener('click', () => {
+            container.classList.add('active-popup');
+            
+        });
+
+        var botaoclique = document.getElementById("ID_DO_BOTAO");
+        var email = document.getElementById("email");
+        var senha = document.getElementById("senha");
+
+        botaoclique.addEventListener("click", function () {
+            if (email.value == "" || senha.value == "") {
+                alert("preencha os campos");
+            } else {
+                alert("Login feito com sucesso");
+                window.location.href = "home.html";
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
